@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="javascript/game.js"> </script>
+    
+</head>
+
+<body>
+
+<H1>The Psychic Game</H1>
+
+<p>Guess what letter I'm thinking of</p>
+
+<script src="javascript/game.js"> 
+
+var computerchoice = ["a", "b", "c"];
+
+var wins = 0;
+var losses = 0;
+
+document.onkeyup = function(event) {
+
+    var userguess = event.key;
+    var computerguess = computerchoices[math.floor(math.random() * conputerchoices.length)];
+
+    if ((userguess === "a" && computerguess === "a") ||
+        (userguess === "b" && computerguess === "b") ||
+        (userguess === "c" && computerguess === "c")) {
+            wins ++;
+        }
+    else { losses ++; }
+
+    // add in dispay on screen of wins, losses, what letters left
+    // how to get this to work in java?
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
