@@ -3,33 +3,32 @@ var computerchoice = ["a", "b", "c"];
 var wins = 0;
 var losses = 0;
 
-var wins = document.getElementById("wins");
-var losses = document.getElementById("losses");
-var guessesleft = document.getElementById("guessesleft");
-var sofar = document.getElementById("sofar");
+var winsText = document.getElementById("wins-text");
+var lossesText = document.getElementById("losses-text");
+var guessesleftText = document.getElementById("guessesleft-text");
+var sofarText = document.getElementById("sofar-text");
 
 
 document.onkeyup = function(event) {
 
-    
     var userguess = event.key;
-    var computerguess = computerchoice[Math.floor(Math.random() *computerchoice.length)];
+    var computerguess = computerchoice[Math.floor(Math.random() * computerchoice.length)];
     
-   // if ((userguess === "a") || (userguess === "b") || (userguess === "c")) {
+   if ((userguess === "a") || (userguess === "b") || (userguess === "c")) {
         
-        if ((userguess === "a" && computerguess === "a") ||
-        (userguess === "b" && computerguess === "b") ||
-        (userguess === "c" && computerguess === "c")) {
-            wins ++;
+        if (userguess === computerguess) {
+            wins++;
         }
-        else { losses ++; }
+        else { losses++; }
         
-        //} 
         // add in dispay on screen of wins, losses, what letters left
         
-        wins.textContent = wins;
-        losses.textContent = losses;
-        guessesleft.textContent = "testing";
-        sofar.textContent = "test";
+
+        winsText.textContent = "Wins: test " + wins;
+        lossesText.textContent = "Losses: tese" + losses;
+        guessesleftText.textContent = "Guesses Left: ";
+        sofarText.textContent = "Your Guesses so far: " + userguess;
         
     }
+        
+    };
